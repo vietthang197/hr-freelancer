@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="default">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>PostgresDs</jta-data-source>
+        <class>com.thanglv.hrfreelancer.entity.CorpIndustry</class>
+        <properties>
+            <property name="hibernate.delay_cdi_access" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- create / create-drop / update -->
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.order_inserts" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.jdbc.batch_size" value="50000"/>
+            <property name="hibernate.jdbc.fetch_size" value="1000"/>
+            <property name="hibernate.session.events.log.LOG_QUERIES_SLOWER_THAN_MS" value="1"/>
+            <property name="hibernate.search.backend.analysis.configurer" value="class:com.thanglv.hrfreelancer.config.MyAnalysisConfigurer"/>
+            <property name="hibernate.search.backend.directory.type" value="local-filesystem"/>
+            <property name="hibernate.search.backend.directory.root" value="D:/apache_lucene/hronline-v3"/>
+            <property name="hibernate.search.backend.lucene_version" value="8.11.2"/>
+            <property name="hibernate.search.backend.thread_pool.size" value="100"/>
+        </properties>
+    </persistence-unit>
+</persistence>

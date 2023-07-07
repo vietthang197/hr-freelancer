@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+     <Resource id="PostgresDs" type="DataSource">
+	    JdbcDriver   org.postgresql.Driver
+	    JdbcUrl  jdbc:postgresql://localhost:5433/postgres
+	    UserName     postgres
+	    Password     1234
+		minIdle    1
+		maxActive  10000
+	</Resource>
+</resources>
