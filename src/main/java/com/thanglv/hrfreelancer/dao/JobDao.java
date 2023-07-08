@@ -4,10 +4,9 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import org.hibernate.search.engine.cfg.spi.ConfigurationPropertyChecker;
 @ApplicationScoped
 public class JobDao {
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(name = "default")
     private EntityManager entityManager;
 
     @PostConstruct

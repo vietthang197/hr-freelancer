@@ -17,6 +17,11 @@
         <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
 
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>WEB-INF/log4j2.xml</param-value>
+    </context-param>
+
     <filter>
         <filter-name>Keycloak Filter</filter-name>
         <filter-class>org.keycloak.adapters.servlet.KeycloakOIDCFilter</filter-class>
